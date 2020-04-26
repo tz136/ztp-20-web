@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: $gu-grey;
+}
+
+img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+h4 {
+    padding-bottom: $gu-spacer-1;
+}

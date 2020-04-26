@@ -1,0 +1,32 @@
+$spacers: (
+    1: 8px,
+    2: 16px,
+    3: 24px,
+    4: 32px,
+    5: 40px,
+    6: 56px,
+    7: 64px,
+    8: 80px,
+    9: 128px,
+    10: 160px,
+    11: 224px,
+);
+
+$gu-spacer-1:  map-get($spacers, 1);
+$gu-spacer-2:  map-get($spacers, 2);
+$gu-spacer-3:  map-get($spacers, 3);
+$gu-spacer-4:  map-get($spacers, 4);
+$gu-spacer-5:  map-get($spacers, 5);
+$gu-spacer-6:  map-get($spacers, 6);
+$gu-spacer-7:  map-get($spacers, 7);
+$gu-spacer-8:  map-get($spacers, 8);
+$gu-spacer-9:  map-get($spacers, 9);
+$gu-spacer-10: map-get($spacers, 10);
+$gu-spacer-11: map-get($spacers, 11);
+
+// generate spacer utility classes, e.g. gu-spacer--5
+@each $key, $value in $spacers {
+    .gu-spacer--#{$key} {
+        margin-bottom: $value;
+    }
+}

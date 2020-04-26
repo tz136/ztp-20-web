@@ -1,0 +1,46 @@
+@import '../../../scss/variables/global-variables.scss';
+@import '../../../scss/mixins/global-mixins.scss';
+
+.header {
+    width: 100%;
+    height: 64px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: $gu-white;
+    color: $gu-primary;
+    padding: 0 $gu-spacer-4;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    @include breakpoint(m) {
+        justify-content: space-between;
+    }
+
+    &__logo {
+       font-size: 35px;
+       font-weight: bolder;
+
+       @include breakpoint(m) {
+            font-size: 60px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__menu {
+        width: 30%;
+        height: 100%;
+        display: none;
+        font-size: 20px;
+
+        @include breakpoint(m) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            font-weight: bolder;
+        }
+    }
+}

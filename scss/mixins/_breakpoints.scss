@@ -1,0 +1,55 @@
+$breakpoints: (
+    xs: 0px,
+    s: 568px,
+    m: 768px,
+    l: 1025px,
+    xl: 1441px
+);
+
+@mixin breakpoint($name) {
+    @if not map-has-key($breakpoints, $name) {
+        @warn "Warning: `#{$name}` is not a valid breakpoint name.";
+    } @else {
+        @media (min-width: map-get($breakpoints, $name)) {
+            @content;
+        }
+    }
+}
+
+// Create a comma-separated string of our 5 numric breakpoint sizes that can be
+// communicated up to JS
+$breakpoint-sizes: '#{map-get($breakpoints, 'xs')},#{map-get($breakpoints, 's')},#{map-get($breakpoints, 'm')},#{map-get($breakpoints, 'l')},#{map-get($breakpoints, 'xl')}';
+
+@mixin js-breakpoint-support() {
+
+    body {
+        &:after {
+            content: 'xs,#{$breakpoint-sizes}';
+            display: none;
+
+            // For debugging, you can uncomment this section to get a s
+            // active breakpoint displayed in the bottom right hand corner
+            // display: block;
+            // position: absolute;
+            // bottom: 0;
+            // right: 0;
+            // background: rgba(100,100,100,0.5);
+
+            @include breakpoint(s) {
+                content: 's,#{$breakpoint-sizes}';
+            }
+
+            @include breakpoint(m) {
+                content: 'm,#{$breakpoint-sizes}';
+            }
+
+            @include breakpoint(l) {
+                content: 'l,#{$breakpoint-sizes}';
+            }
+
+            @include breakpoint(xl) {
+                content: 'xl,#{$breakpoint-sizes}';
+            }
+        }
+    }
+}

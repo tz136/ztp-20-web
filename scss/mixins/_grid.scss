@@ -1,0 +1,116 @@
+$grid-cols: 12;
+
+.gu-container {
+    position: relative;
+     // Separates main content from footer
+    padding: 161px 0 $gu-spacer-4 0;
+    min-height: 500px;
+
+    @include breakpoint(l) {
+        padding: 145px 0 $gu-spacer-4 0;
+    }
+
+    background-color: $gu-grey;
+    z-index: 50;
+    // TODO: Remove once we settle on styles, this just makes it more readable
+    // for the time being :)
+}
+
+// Default page row
+.gu-row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: $gu-spacer-3;
+    margin: 0 auto;
+    max-width: 1441px;
+    padding: 0 $gu-spacer-2;
+
+    @include breakpoint(s) {
+        padding: 0 $gu-spacer-3 0;
+    }
+
+    @include breakpoint(m) {
+        padding: 0 $gu-spacer-4 0;
+    }
+
+    @include breakpoint(l) {
+        padding: 0 $gu-spacer-6 0;
+    }
+
+    // Add class o-row--nested to o-row to reset padding on nested grids
+    &--nested {
+        padding: 0;
+        margin: 0;
+    }
+
+    // Switches the order of the layout from the source
+    // Because of accessibility challenges, this should likely be avoided
+    &--reverse {
+        direction: rtl;
+
+        // PERF: Could change to > .column and remove the mapping on each generated class if need to save 3kb
+    }
+
+    &--fill-content {
+        grid-auto-flow: dense;
+    }
+}
+
+// This allows for full bleed rows
+.gu-row-full {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: $gu-spacer-3;
+}
+
+// Creates the grid classes, breakpoints, and modifiers
+// ex: gu-xs--12, gu-l--10
+
+// Offsets - can currently only use one offset per row
+// If you need more, use empty divs with correct column # class
+// ex: gu-xs--offset-1, gu-l--offset-5
+
+// Reverse grid
+// To reverse, we set the direction of the row from rtl,
+// We then need to set back the inner divs to ltr
+@each $key, $bp in $breakpoints  {
+    @if $key == xs {
+        @for $i from 0 through $grid-cols {
+            @if ($i == 0) {
+                .gu-#{$key}--#{$i} { display: none; }
+            } @else {
+                .gu-#{$key}--#{$i} {
+                    display: block;
+                    grid-column-end: span $i;
+                }
+                .gu-#{$key}--offset-#{$i} { grid-column-start: ($i + 1); }
+                .gu-row--reverse .o-#{$key}--#{$i} { direction: ltr; }
+            }
+        }
+    } @else {
+        @include breakpoint(#{$key}) {
+            @for $i from 0 through $grid-cols {
+                @if ($i == 0) {
+                    .gu-#{$key}--#{$i} { display: none; }
+                    .gu-#{$key}--offset-#{$i} { grid-column-start: (1); }
+                } @else {
+                    .gu-#{$key}--#{$i} {
+                        display: block;
+                        grid-column-end: span $i;
+                    }
+                    .gu-#{$key}--offset-#{$i} { grid-column-start: ($i + 1); }
+                    .gu-row--reverse .o-#{$key}--#{$i} { direction: ltr; }
+                }
+            }
+        }
+    }
+}
+.gu-flex-vertical-center {
+    display: flex;
+    align-items: center;
+}
+
+.gu-flex-horizontal-center {
+    display: flex;
+    justify-content: center;
+}
