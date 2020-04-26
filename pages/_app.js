@@ -1,12 +1,15 @@
+import { Provider } from 'react-redux';
+import store from '../redux/store';
+
 import '../scss/config.scss';
 
 import Header from '../modules/header/component/Header';
 
 export default function App({ Component, pageProps }) {
     return (
-        <div>
+        <Provider store={store}>
             <Header />
             <Component {...pageProps} />
-        </div>
+        </Provider>
     )
 }
