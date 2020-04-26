@@ -1,9 +1,27 @@
 * {
     box-sizing: border-box;
+    &::-webkit-input-placeholder,
+    &::-ms-input-placeholder,
+    &::-moz-placeholder,
+    &::placeholder {
+        font-size: 1.4rem;
+        // prevent some browsers from reducing opacity by default
+        opacity: 1;
+    }
 }
 
 html {
     background-color: $gu-grey;
+    font-size: 10px;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    color: $gu-black;
+    font-family: $univers;
+    font-weight: normal;
+    font-size: 1.8rem;
+    line-height: 1.78;
 }
 
 img {
@@ -17,6 +35,94 @@ video {
     height: auto;
 }
 
+h1 {
+    font-family: $ginto-nord-bold;
+    font-size: 3.6rem;
+    font-weight: bold;
+    letter-spacing: normal;
+    line-height: 1.56;
+}
+
+h2 {
+    font-family: $sharp-grotesk-medium;
+    font-size: 4.8rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+    line-height: 1.25;
+}
+
+h3 {
+    font-family: $sharp-grotesk-book;
+    font-size: 3.6rem;
+    font-weight: normal;
+    letter-spacing: 1px;
+    line-height: 1.33;
+    margin-bottom: $gu-spacer-2;
+}
+
 h4 {
-    padding-bottom: $gu-spacer-1;
+    font-family: $sharp-grotesk-medium;
+    font-size: 2.4rem;
+    font-weight: normal;
+    letter-spacing: 1px;
+    line-height: 1.67;
+}
+
+h5 {
+    font-family: $sharp-grotesk-semibold;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: normal;
+    line-height: 1.25;
+}
+
+p {
+    letter-spacing: 0.6px;
+    line-height: 1.78;
+
+    &.gu-paragraph--small {
+        font-size: 1.4rem;
+    }
+}
+
+a {
+    color: $gu-black;
+    font-family: $univers;
+    font-size: 1.8rem;
+    text-decoration: none;
+
+    &.gu-link--small {
+        font-size: 1.6rem;
+        &-blue {
+            color: $gu-link-blue;
+        }
+    }
+}
+
+em {
+    font-family: $americana-extra-bold;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1.4;
+}
+
+label {
+    font-family: $sharp-grotesk-semibold;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 1.85;
+    text-transform: uppercase;
+}
+
+input, select {
+    font-size: 1.4rem;
+}
+
+// Normalize password field obfuscation dots (Webkit uses smaller unicode bullet by default)
+input[type="password"] {
+    font: small-caption;
+    font-size: 16px
 }

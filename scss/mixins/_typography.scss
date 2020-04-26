@@ -9,4 +9,105 @@
         }
     }
 }
+/***********************
+ *** Utility Classes ***
+ ***********************/
+ .gu-text--left {
+    text-align: left;
+}
+
+.gu-text--center {
+    text-align: center;
+}
+
+.gu-text--right {
+    text-align: right;
+}
+
+.gu-text--error {
+    color: $gu-error-red;
+}
+
+.gu-text--no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.gu-text--bold {
+    font-weight: bold;
+}
+
+.gu-text--muted {
+    color: $gu-grey;
+}
+
+/*******************
+ *** Text Styles ***
+ *******************/
+.gu-text--hero {
+    font-family: $ginto-nord-bold;
+    font-size: 8rem;
+    font-weight: bold;
+    letter-spacing: 2.5px;
+    line-height: normal;
+}
+
+.gu-text--subtext {
+    font-family: $sharp-grotesk-book;
+    font-size: 2.2rem;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    line-height: 1.45;
+}
+
+.gu-text--button {
+    font-family: $sharp-grotesk-book;
+    font-size: 1.8rem;
+    font-weight: normal;
+    letter-spacing: 2.8px;
+    line-height: 1.33;
+}
+
+.gu-text--caption {
+    font-family: $univers;
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: normal;
+    line-height: 1.71;
+}
+
+.gu-text--title-1 {
+    font-family: $ginto-nord-bold;
+    font-size: 8rem;
+    font-weight: bold;
+    letter-spacing: 2.5px;
+    line-height: normal;
+}
+
+.gu-text--title-2 {
+    font-family: $ginto-nord-bold;
+    font-size: 3.6rem;
+    font-weight: bold;
+    letter-spacing: normal;
+    line-height: 1.56;
+}
+
+.gu-text--title-3 {
+    font-family: $sharp-grotesk-medium;
+    font-size: 4.8rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+    line-height: 1.25;
+}
+
+.gu-text--title-4 {
+    font-family: $sharp-grotesk-book;
+    font-size: 3.6rem;
+    font-weight: normal;
+    letter-spacing: 1px;
+    line-height: 1.33;
+    margin-bottom: $gu-spacer-2;
+}
 

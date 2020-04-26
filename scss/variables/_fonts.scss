@@ -1,0 +1,152 @@
+$sans: sans-serif;
+
+
+/*****************
+ *** Americana ***
+ *****************/
+$americana-extra-bold: 'Americana Extra Bold', $sans;
+
+$americana-directory: '/public/lib/fonts/americana/';
+@font-face {
+    font-family: 'Americana Extra Bold';
+    font-style:  normal;
+    font-weight: 800;
+    src: url($americana-directory + 'Americana-ExtraBold.ttf') format('truetype'),
+}
+
+/******************
+ *** Ginto Nord ***
+ ******************/
+$ginto-nord-bold: 'Ginto Nord Bold', $sans;
+
+$ginto-nord-directory: '/public/lib/fonts/ginto-nord/';
+@font-face {
+    font-family: 'Ginto Nord Bold';
+    font-style:  normal;
+    font-weight: bold;
+    src: url($ginto-nord-directory + 'GintoNord-Bold.ttf') format('truetype'),
+}
+
+/****************
+ *** Palantin ***
+ ****************/
+$palantin: 'Palantin', $sans;
+
+
+/************************
+ *** Sharp Grotesk 20 ***
+ ************************/
+$sharp-grotesk-light:           'Sharp Grotesk Light',           $sans;
+$sharp-grotesk-light-italic:    'Sharp Grotesk Light Italic',    $sans;
+$sharp-grotesk-book:            'Sharp Grotesk Book',            $sans;
+$sharp-grotesk-book-italic:     'Sharp Grotesk Book Italic',     $sans;
+$sharp-grotesk-medium:          'Sharp Grotesk Medium',          $sans;
+$sharp-grotesk-medium-italic:   'Sharp Grotesk Medium Italic',   $sans;
+$sharp-grotesk-semibold:        'Sharp Grotesk Semibold',        $sans;
+$sharp-grotesk-semibold-italic: 'Sharp Grotesk Semibold Italic', $sans;
+$sharp-grotesk-bold:            'Sharp Grotesk Bold',            $sans;
+$sharp-grotesk-bold-italic:     'Sharp Grotesk Bold Italic',     $sans;
+
+$sharp-grotesk-directory: '/public/lib/fonts/sharp-grotesk/';
+@font-face {
+    font-family: 'Sharp Grotesk Light';
+    font-style: normal;
+    font-weight: 300;
+    src: url($sharp-grotesk-directory + 'SharpGroteskLight20.woff2') format('woff2'),
+         url($sharp-grotesk-directory + 'SharpGroteskLight20.woff')  format('woff'),
+         url($sharp-grotesk-directory + 'SharpGroteskLight20.ttf')   format('truetype');
+}
+@font-face {
+    font-family: 'Sharp Grotesk Light Italic';
+    font-style: italic;
+    font-weight: 300;
+    src: url($sharp-grotesk-directory + 'SharpGroteskLightItalic20.woff2') format('woff2'),
+         url($sharp-grotesk-directory + 'SharpGroteskLightItalic20.woff')  format('woff'),
+         url($sharp-grotesk-directory + 'SharpGroteskLightItalic20.ttf')   format('truetype');
+}
+@font-face {
+    font-family: 'Sharp Grotesk Book';
+    font-style:  normal;
+    font-weight: 400;
+    src: url($sharp-grotesk-directory + 'SharpGroteskBook20.woff2') format('woff2'),
+         url($sharp-grotesk-directory + 'SharpGroteskBook20.woff')  format('woff'),
+         url($sharp-grotesk-directory + 'SharpGroteskBook20.ttf')   format('truetype');
+}
+@font-face {
+    font-family: 'Sharp Grotesk Book Italic';
+    font-style:  italic;
+    font-weight: 400;
+    src: url($sharp-grotesk-directory + 'SharpGroteskBookItalic20.woff2') format('woff2'),
+         url($sharp-grotesk-directory + 'SharpGroteskBookItalic20.woff')  format('woff'),
+         url($sharp-grotesk-directory + 'SharpGroteskBookItalic20.ttf')   format('truetype');
+}
+@font-face {
+    font-family: 'Sharp Grotesk Medium';
+    font-style:  normal;
+    font-weight: 500;
+    src: url($sharp-grotesk-directory + 'SharpGroteskMedium20.woff2') format('woff2'),
+         url($sharp-grotesk-directory + 'SharpGroteskMedium20.woff') format('woff'),
+         url($sharp-grotesk-directory + 'SharpGroteskMedium20.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Sharp Grotesk Medium Italic';
+    font-style:  italic;
+    font-weight: 500;
+    src: url($sharp-grotesk-directory + 'SharpGroteskMediumItalic20.woff2') format('woff2'),
+         url($sharp-grotesk-directory + 'SharpGroteskMediumItalic20.woff') format('woff'),
+         url($sharp-grotesk-directory + 'SharpGroteskMediumItalic20.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Sharp Grotesk Semibold';
+    font-style:  normal;
+    font-weight: 600;
+    src: url($sharp-grotesk-directory + 'SharpGroteskSmBold20.woff2') format('woff2'),
+         url($sharp-grotesk-directory + 'SharpGroteskSmBold20.woff')  format('woff'),
+         url($sharp-grotesk-directory + 'SharpGroteskSmBold20.ttf')   format('truetype');
+}
+@font-face {
+    font-family: 'Sharp Grotesk Semibold Italic';
+    font-style:  italic;
+    font-weight: 600;
+    src: url($sharp-grotesk-directory + 'SharpGroteskSmBoldItalic20.woff2') format('woff2'),
+         url($sharp-grotesk-directory + 'SharpGroteskSmBoldItalic20.woff')  format('woff'),
+         url($sharp-grotesk-directory + 'SharpGroteskSmBoldItalic20.ttf')   format('truetype');
+}
+@font-face {
+    font-family: 'Sharp Grotesk 20 Bold';
+    font-style:  normal;
+    font-weight: 700;
+    src: url($sharp-grotesk-directory + 'SharpGroteskBold20.woff2') format('woff2'),
+         url($sharp-grotesk-directory + 'SharpGroteskBold20.woff')  format('woff'),
+         url($sharp-grotesk-directory + 'SharpGroteskBold20.ttf')   format('truetype');
+
+}
+@font-face {
+    font-family: 'Sharp Grotesk 20 Bold Italic';
+    font-style:  italic;
+    font-weight: 700;
+    src: url($sharp-grotesk-directory + 'SharpGroteskBoldItalic20.woff2') format('woff2'),
+         url($sharp-grotesk-directory + 'SharpGroteskBoldItalic20.woff')  format('woff'),
+         url($sharp-grotesk-directory + 'SharpGroteskBoldItalic20.ttf')   format('truetype');
+}
+
+
+/***************
+ *** Univers ***
+ ***************/
+$univers: 'Univers', $sans;
+$univers-light: 'Univers Light', $sans;
+$univers-directory: '/public/lib/fonts/univers/';
+
+@font-face {
+    font-family: 'Univers';
+    font-style:  normal;
+    font-weight: 400;
+    src: url($univers-directory + 'Univers.ttf') format('truetype'),
+}
+@font-face {
+    font-family: 'Univers Light';
+    font-style:  normal;
+    font-weight: 300;
+    src: url($univers-directory + 'Univers-Light.ttf') format('truetype'),
+}
